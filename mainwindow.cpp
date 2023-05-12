@@ -7,7 +7,14 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 }
+void MainWindow::begin()
+{
 
+}
+void MainWindow::calc()
+{
+
+}
 MainWindow::~MainWindow()
 {
     delete ui;
