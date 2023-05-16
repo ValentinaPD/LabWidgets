@@ -7,6 +7,10 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QLabel>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QMessageBox>
+#include <QValidator>
 namespace Ui {
 class MainWindow;
 }
@@ -33,5 +37,14 @@ public slots:
 private:
     Ui::MainWindow *ui;
 };
+class StrValidator:public QValidator // класс компонента проверки ввода
+{
 
+public:
+StrValidator(QObject *parent):QValidator(parent){}
+virtual State validate(QString &str,int &pos)const
+{
+return Acceptable; // метод всегда принимает вводимую строку
+}
+};
 #endif // MAINWINDOW_H
