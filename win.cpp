@@ -3,13 +3,13 @@
 Win::Win(QWidget *parent):QWidget(parent)
 {
     codec = QTextCodec::codecForName("Windows-1251");
-    this->setWindowTitle(codec->toUnicode("Счетчик"));
-    label1 = new QLabel(codec->toUnicode("Cчет по 1"),this);
-    label2 = new QLabel(codec->toUnicode("Cчет по 5"),this);
+    this->setWindowTitle(codec->toUnicode("Counter"));
+    label1 = new QLabel(codec->toUnicode("Account for 1"),this);
+    label2 = new QLabel(codec->toUnicode("Account for 5"),this);
     edit1 = new Counter("0",this);
     edit2 = new Counter("0",this);
     calcbutton=new QPushButton("+1",this);
-    exitbutton=new QPushButton(codec->toUnicode("Выход"),this);
+    exitbutton=new QPushButton(codec->toUnicode("Exit"),this);
     QHBoxLayout *layout1 = new QHBoxLayout();
     layout1->addWidget(label1);
     layout1->addWidget(label2);
